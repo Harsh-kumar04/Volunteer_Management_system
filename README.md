@@ -3,6 +3,8 @@
 A modern platform that connects NGOs, Volunteers & Staff — smoother, faster, smarter.
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2RjN2x0dHJrd2J5dXdpMGNsdDExMWgyeWs2dmxrb2N3dGcxbzU3ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/cFkiFMDg3iFoI/giphy.gif" width="350"/>
+
+
 💡 Why I Created This Project (Real Problems I Faced)
 
 While working with real NGOs, maine kuch major issues face kiye:
@@ -49,7 +51,12 @@ Feature	Description
 📝 Applications	Volunteer applies, NGO approves
 🔐 JWT Auth	Secure login for all roles
 📂 MERN Stack	Scalable architecture
+
+
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWI0dTZhcDdicXczc2g0bmppaGRjZXIzcjY0ZzFpbGZ1bWg1a3NmNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7qE1YN7aBOFPRw8E/giphy.gif" width="350"/>
+
+
+
 🗄️ Database Schemas (Short & Clean)
 🏢 NGO
 { name, email, password, phone, address, verified }
