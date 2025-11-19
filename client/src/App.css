@@ -1,0 +1,307 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* GLOBAL BUTTON STYLE - DESKTOP DEFAULT */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* FULL RESPONSIVE STACKED BUTTONS ON MOBILE */
+@media (max-width: 768px) {
+  button {
+    width: 90%; /* full width button */
+    max-width: 320px; /* optional for good look */
+  }
+
+  .btn {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.foot {
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(205, 35, 35, 1) 0%,
+    rgba(205, 35, 35, 0.89) 100%
+  );
+}
+
+.ready {
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.join {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.box {
+  padding-top: 50px;
+}
+
+.btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding-bottom: 50px;
+}
+
+.vlog {
+  border-radius: 5px;
+}
+
+.nlog {
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.vlog:hover {
+  background-color: #fae8e8;
+}
+.nlog:hover {
+  background-color: #fae8e81d;
+}
+
+.nav {
+  display: flex;
+}
+
+.li {
+  padding-right: 20px;
+}
+
+.hero {
+  background-color: #f9f9f9;
+}
+
+.class {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 60px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.make {
+  font-size: 1.2rem;
+  color: #737373;
+  opacity: 80%;
+}
+
+.reg {
+  background-color: white;
+  border-radius: 10px;
+  border: solid rgba(210, 210, 210, 0.892) 0.5px;
+}
+.join-btn {
+  background-color: #cd2323;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #cd2421dd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.reg:hover {
+  background-color: #cd2323d2;
+  color: white;
+}
+/* DEFAULT BUTTONS (desktop) */
+.reg,
+.join-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE: MOBILE BUTTON STYLE */
+@media (max-width: 768px) {
+  .btn {
+    flex-direction: column;
+    gap: 10px; /* space between buttons */
+    align-items: center;
+    width: 100%;
+  }
+
+  .reg,
+  .join-btn {
+    width: 90%; /* full width-like buttons */
+  }
+}
+/* HERO BUTTON CONTAINER */
+.herobtn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .herobtn {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .herobtn button {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto; /* ✔ center alignment */
+  }
+  .class {
+    font-size: 2rem; /* smaller heading */
+    line-height: 2.4rem; /* better spacing */
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .make {
+    font-size: 0.95rem; /* readable text */
+    line-height: 1.4rem;
+    display: block;
+    padding: 0 15px; /* side padding for mobile */
+  }
+
+  .hero {
+    text-align: center; /* ensures heading + subtitle centered */
+    padding: 20px 10px;
+  }
+}
+.how-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.how-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.how-sub {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.how-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.how-card {
+  width: 400px;
+  background: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 5px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 7px 25px;
+}
+
+.how-icon {
+  width: 65px;
+  height: 65px;
+  background: rgba(205, 35, 35, 0.15);
+  color: #cd2323;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.how-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .how-card {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

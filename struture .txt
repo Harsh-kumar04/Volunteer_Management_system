@@ -1,0 +1,148 @@
+🚀 NGO Volunteer Management System – Short Technical Overview
+
+A simple overview of APIs + Database Schemas + Basic Flow so the whole team understands the project quickly.
+
+
+
+🧩 1. Modules Overview
+
+NGO Module → NGO signup/login + profile
+
+NGO Staff Module → NGO ke under roles (admin/manager/viewer)
+
+Volunteer Module → Volunteer signup/login + profile
+
+Event Module → NGOs create events
+
+Application Module → Volunteers apply to events
+
+
+
+🗂 2. Database Schemas (Simple Version)
+🏢 NGO
+{ name, email, password, phone, address, verified }
+
+👥 NGO Staff User
+{ ngoId, name, email, password, role }   // roles: admin/manager/viewer
+
+🙋 Volunteer
+{ name, email, password, phone, skills, city }
+
+📅 Event
+{ ngoId, title, description, date, location, requiredVolunteers }
+
+📝 Application
+{ eventId, volunteerId, status }   // pending/approved/rejected
+
+
+
+
+🔗 3. APIs (Short, Clean List)
+
+🏢 NGO APIs (for registering & managing NGOs)
+#	Method	Endpoint	Purpose
+1	POST	/api/ngo/register	Register NGO
+2	POST	/api/ngo/login	NGO login (JWT token)
+3	GET	/api/ngo/profile	Get NGO details (token required)
+4	PUT	/api/ngo/profile	Update NGO details
+5	GET	/api/ngo/list	(Optional – admin) Get all NGOs
+6	PATCH	/api/ngo/verify/:id	(Optional – admin) Verify NGO
+
+👉 Total NGO APIs: 4–6
+
+
+
+
+👤 NGO User (Staff) APIs
+
+Each NGO can add/manage their users (admins/managers/viewers).
+
+#	Method	Endpoint	Purpose
+7	POST	/api/ngo-user/create	Add staff user under NGO
+8	POST	/api/ngo-user/login	Staff login
+9	GET	/api/ngo-user	Get all staff of an NGO
+10	PUT	/api/ngo-user/:id	Update staff details/role
+11	DELETE	/api/ngo-user/:id	Delete staff
+
+👉 Total NGO User APIs: 4–5
+
+🙋 Volunteer APIs
+#	Method	Endpoint	Purpose
+12	POST	/api/volunteer/register	Volunteer signup
+13	POST	/api/volunteer/login	Volunteer login
+14	GET	/api/volunteer/profile	Get volunteer profile
+15	PUT	/api/volunteer/profile	Update volunteer info
+16	GET	/api/volunteer/applications	Get all applications of that volunteer
+
+👉 Total Volunteer APIs: 4–5
+
+📅 Event APIs
+#	Method	Endpoint	Purpose
+17	POST	/api/events/create	Create a new event (NGO staff only)
+18	GET	/api/events	Get all events (public + volunteers)
+19	GET	/api/events/:id	Get single event details
+20	PUT	/api/events/:id	Edit event (NGO only)
+21	DELETE	/api/events/:id	Delete event (NGO only)
+22	GET	/api/ngo/:id/events	Get all events of specific NGO
+
+👉 Total Event APIs: 5–6
+
+📝 Application APIs (volunteer ↔ NGO link)
+#	Method	Endpoint	Purpose
+23	POST	/api/applications/apply	Volunteer applies to event
+24	GET	/api/applications/:eventId	NGO views all applications for one event
+25	PATCH	/api/applications/:id/status	NGO approves/rejects
+26	GET	/api/applications/volunteer/:id	Volunteer sees their applications
+
+👉 Total Application APIs: 3–4
+
+🧠 Optional (Later)
+#	Method	Endpoint	Purpose
+27	POST	/api/upload	Upload profile/event image (Multer)
+28	GET	/api/dashboard/stats	For dashboards (NGO, Volunteer, Admin)
+
+👉 Total Optional APIs: 2
+
+
+
+
+🔢 💥 TOTAL COUNT
+Module	APIs
+NGO	4–6
+NGO Users	4–5
+Volunteers	4–5
+Events	5–6
+Applications	3–4
+Optional	2
+TOTAL	22–25 APIs approx.
+
+
+
+
+
+🔄 4. Basic Flow (Frontend Understanding)
+Volunteer Flow
+
+Events → Apply → Track Status
+
+NGO Flow
+
+Add Staff → Create Events → See Applications
+
+Staff Roles
+
+Admin = full access
+
+Manager = events + applications
+
+Viewer = read only
+
+
+
+
+
+🎯 5. Final Summary
+
+✔ Total APIs → 22–25
+✔ Clean schema → Easy to implement
+✔ Clear flow → Frontend can design screens easily
